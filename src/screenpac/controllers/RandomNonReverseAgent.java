@@ -4,9 +4,6 @@ import screenpac.model.GameStateInterface;
 import screenpac.model.Node;
 import screenpac.extract.Constants;
 import screenpac.features.Utilities;
-
-import java.util.Set;
-import java.util.HashSet;
 import java.util.ArrayList;
 
 public class RandomNonReverseAgent implements AgentInterface, Constants {

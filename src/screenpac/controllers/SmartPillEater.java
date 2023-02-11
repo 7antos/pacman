@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+// TODO fix this class
 public class SmartPillEater implements AgentInterface {
     /*
     This aims to be a smart version of the PillEater.

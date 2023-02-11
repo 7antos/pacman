@@ -10,6 +10,7 @@ import screenpac.controllers.AgentInterface;
 import screenpac.controllers.SimplePillEater;
 import screenpac.controllers.RandomAgent;
 import screenpac.controllers.RandomNonReverseAgent;
+import screenpac.controllers.SmartPillEater;
 import screenpac.ghosts.GhostTeamController;
 import screenpac.ghosts.RandTeam;
 import screenpac.ghosts.PincerTeam;
@@ -26,13 +27,14 @@ public class Game implements Constants {
     public static void main(String[] args) throws Exception {
         AgentInterface agent = new SimplePillEater();
         agent = new RandomNonReverseAgent();
-        agent = new RandomAgent();
+        agent = new SmartPillEater();
+        // agent = new RandomAgent();
         GhostTeamController ghostTeam;
         ghostTeam = new RandTeam();
         ghostTeam = new LegacyTeam();
         ghostTeam = new PincerTeam();
 
-        agent = null;
+        //agent = null;
         if (visual) runVisual(agent, ghostTeam);
         else runDark(agent, ghostTeam);
     }

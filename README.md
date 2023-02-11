@@ -36,3 +36,15 @@ There are 4 mazes that are processed before each run, pill index indicate the nu
 
 Printed maze info in **screenpac.model.Maze.processOldMaze(OldMaze maze)**
 Printed mazes processes in **screenpac.model.Level**
+
+## Pacman
+
+The player has 10 lives and can move in 4 diferent directions, if it gets cought by a gost losses a life, but if it's in supper pill mode (it has eaten an super pill) it can disable any ghost in touches and gain points.
+- Regular Pill = 10 Points
+- Special Pill = 50 Points
+- Eat Ghost = 200 * (number of ghosts eaten within special pill mode duration)
+
+This agent uses is going to uses a controller to get the best score possible. (**screenpac.controllers**)
+- RandomAgent - In each node it choses a random direction
+- RandomNonReverseAgent - In each node it choses a random direction except the current reverse one
+- SimplePillEater - Turns to the shortest way to the nearest pill, if 2 or more are in the same distances, it follows direction of priorities of up, left, right and down.

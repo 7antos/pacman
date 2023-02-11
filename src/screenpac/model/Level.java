@@ -24,22 +24,22 @@ public class Level {
         Maze maze1 = new Maze();
         maze1.processOldMaze(MazeOne.getMaze());
         mazes.add(maze1);
-        System.out.println("Processed maze 1");
+        // System.out.println("Processed maze 1");
 
         Maze maze2 = new Maze();
         maze2.processOldMaze(MazeTwo.getMaze());
         mazes.add(maze2);
-        System.out.println("Processed maze 2");
+        // System.out.println("Processed maze 2");
 
         Maze maze3 = new Maze();
         maze3.processOldMaze(MazeThree.getMaze());
         mazes.add(maze3);
-        System.out.println("Processed maze 3");
+        // System.out.println("Processed maze 3");
 
         Maze maze4 = new Maze();
         maze4.processOldMaze(MazeFour.getMaze());
         mazes.add(maze4);
-        System.out.println("Processed maze 4");
+        // System.out.println("Processed maze 4");
     }
 
     static Maze getMaze(int level) {
