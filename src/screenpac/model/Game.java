@@ -22,19 +22,17 @@ public class Game implements Constants {
     // and may also be responsible for taking
     // actions that depend on the game state
     static int delay = 40;
-    static boolean visual = true;
+    static boolean visual = false;
 
     public static void main(String[] args) throws Exception {
         AgentInterface agent = new SimplePillEater();
         agent = new RandomNonReverseAgent();
         agent = new SmartPillEater();
-        // agent = new RandomAgent();
+        agent = new RandomAgent();
         GhostTeamController ghostTeam;
         ghostTeam = new RandTeam();
         ghostTeam = new LegacyTeam();
         ghostTeam = new PincerTeam();
-
-        //agent = null;
         if (visual) runVisual(agent, ghostTeam);
         else runDark(agent, ghostTeam);
     }
@@ -52,7 +50,7 @@ public class Game implements Constants {
             game.gs.reset();
             game.run();
             ss.add(game.gs.score);
-            System.out.println("Final score: " + game.gs.score + ", ticks = " + game.gs.gameTick);
+            // System.out.println("Final score: " + game.gs.score + ", ticks = " + game.gs.gameTick);
         }
         System.out.println(t);
         System.out.println(ss);
@@ -86,7 +84,7 @@ public class Game implements Constants {
             cycle();
             // System.out.println(gs.pills.cardinality() + " : " + gs.powers.cardinality());
         }
-        System.out.println("nLives left: " + gs.nLivesRemaining);
+        // System.out.println("nLives left: " + gs.nLivesRemaining);
     }
 
     public void run(int n) throws Exception {
